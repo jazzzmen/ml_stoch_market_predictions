@@ -1,6 +1,6 @@
 # Stock Price Prediction with Machine Learning
 
-## 📌 Project Overview
+## Project Overview
 This project explores whether **machine learning models** can predict the daily movement of Apple’s stock price using **Yahoo Finance data**.  
 
 We tested **classification (up vs down)** and **regression (next-day price)** approaches with different models:  
@@ -9,12 +9,12 @@ We tested **classification (up vs down)** and **regression (next-day price)** ap
 - XGBoost  
 - Ridge Regression  
 
-## 📂 Dataset
+## Dataset
 - Source: [Yahoo Finance](https://finance.yahoo.com/) (via `yfinance` library)  
 - Data: Daily OHLCV (Open, High, Low, Close, Volume) for Apple (`AAPL`)  
 - Time horizon: full available history (`period="max"`)
 
-## ⚙️ Methods
+## Methods
 1. **Data preprocessing**
    - Clean OHLCV data
    - Create technical indicators: returns, SMAs, RSI, MACD, volatility, Bollinger Bands
@@ -32,7 +32,7 @@ We tested **classification (up vs down)** and **regression (next-day price)** ap
    - Classification: Accuracy, F1-score, ROC-AUC  
    - Regression: RMSE, MAE  
 
-## 📊 Results (on test set)
+## Results (on test set)
 | Model                | Task           |  Accuracy  |   F1  |  AUC  | RMSE |  MAE |
 |----------------------|----------------|------------|-------|-------|------|------|
 | Logistic Regression  | Classification | ~0.52      | ~0.52 | ~0.50 | –    | –    |
@@ -40,7 +40,7 @@ We tested **classification (up vs down)** and **regression (next-day price)** ap
 | XGBoost              | Classification | ~0.47–0.50 | ~0.48 | ~0.50 | –    | –    |
 | Ridge Regression     | Regression     | –          | –     | –     | ~5.8 | ~4.2 |
 
-## 📈 Conclusion
+## Conclusion
 - **Daily up/down direction is essentially random** with only OHLCV + basic indicators.  
 - Logistic Regression achieved ~52% accuracy, Random Forest and XGBoost hovered around 47–50%.  
 - Ridge Regression predicted prices with RMSE ~\$6 (on ~\$220 stock).  
