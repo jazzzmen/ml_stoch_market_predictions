@@ -7,6 +7,14 @@ I evaluate both classification (up vs. down) and regression (next-day price).
 - Classification: Logistic Regression, Random Forest, XGBoost
 - Regression: Ridge Regression (predict next-day close)
 
+## How to Run
+```bash
+pip install -r requirements.txt
+jupyter notebook ML_stock_market_predictions.ipynb
+```
+Inside the notebook you can change:
+```TICKER = "AAPL"```
+
 ## Data
 - Source: [Yahoo Finance](https://finance.yahoo.com/) (via `yfinance` library)  
 - Data: Daily OHLCV (Open, High, Low, Close, Volume) for Apple (`AAPL`)  
