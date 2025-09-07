@@ -4,8 +4,8 @@
 I explore whether machine learning can predict the daily movement of Apple’s stock using Yahoo Finance data.
 I evaluate both classification (up vs. down) and regression (next-day price).
 
-Classification: Logistic Regression, Random Forest, XGBoost
-Regression: Ridge Regression (predict next-day close)
+- Classification: Logistic Regression, Random Forest, XGBoost
+- Regression: Ridge Regression (predict next-day close)
 
 ## Data
 - Source: [Yahoo Finance](https://finance.yahoo.com/) (via `yfinance` library)  
@@ -20,14 +20,13 @@ Regression: Ridge Regression (predict next-day close)
   - y_dir (classification): 1 if Close_{t+1} > Close_t, else 0
   - y_next_close (regression): Close_{t+1}
 
-
-2. **Models**
+**Models**
    - Logistic Regression (classification)  
    - Random Forest (classification)  
    - XGBoost (classification)  
    - Ridge Regression (regression for price)  
 
-3. **Evaluation metrics**
+**Evaluation metrics**
    - Classification: Accuracy, F1-score, ROC-AUC  
    - Regression: RMSE, MAE  
 
