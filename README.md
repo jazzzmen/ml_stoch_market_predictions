@@ -11,7 +11,6 @@ Regression: Ridge Regression (predict next-day close)
 - Source: [Yahoo Finance](https://finance.yahoo.com/) (via `yfinance` library)  
 - Data: Daily OHLCV (Open, High, Low, Close, Volume) for Apple (`AAPL`)  
 - Time horizon: full available history (`period="max"`)
-- Horizon: Full history (period="max")
 - Split: Time-ordered (first 80% train, last 20% test), no shuffling
 - I cache data to data/AAPL.csv to avoid repeated downloads.
 
