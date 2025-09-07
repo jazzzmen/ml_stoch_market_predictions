@@ -20,13 +20,13 @@ I evaluate both classification (up vs. down) and regression (next-day price).
   - y_dir (classification): 1 if Close_{t+1} > Close_t, else 0
   - y_next_close (regression): Close_{t+1}
 
-**Models**
+## **Models**
    - Logistic Regression (classification)  
    - Random Forest (classification)  
    - XGBoost (classification)  
    - Ridge Regression (regression for price)  
 
-**Evaluation metrics**
+## **Evaluation metrics**
    - Classification: Accuracy, F1-score, ROC-AUC  
    - Regression: RMSE, MAE  
 
