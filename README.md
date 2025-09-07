@@ -1,26 +1,26 @@
 # Stock Price Prediction with Machine Learning
 
 ## Project Overview
-This project explores whether **machine learning models** can predict the daily movement of Apple’s stock price using **Yahoo Finance data**.  
+I explore whether machine learning can predict the daily movement of Apple’s stock using Yahoo Finance data.
+I evaluate both classification (up vs. down) and regression (next-day price).
 
-We tested **classification (up vs down)** and **regression (next-day price)** approaches with different models:  
-- Logistic Regression  
-- Random Forest  
-- XGBoost  
-- Ridge Regression  
+Classification: Logistic Regression, Random Forest, XGBoost
+Regression: Ridge Regression (predict next-day close)
 
-## Dataset
+## Data
 - Source: [Yahoo Finance](https://finance.yahoo.com/) (via `yfinance` library)  
 - Data: Daily OHLCV (Open, High, Low, Close, Volume) for Apple (`AAPL`)  
 - Time horizon: full available history (`period="max"`)
+- Horizon: Full history (period="max")
+- Split: Time-ordered (first 80% train, last 20% test), no shuffling
+- I cache data to data/AAPL.csv to avoid repeated downloads.
 
-## Methods
-1. **Data preprocessing**
-   - Clean OHLCV data
-   - Create technical indicators: returns, SMAs, RSI, MACD, volatility, Bollinger Bands
-   - Create targets:  
-     - `y_dir`: tomorrow up (1) or down (0)  
-     - `y_next_close`: tomorrow’s closing price
+## Features
+- Returns, SMA(5/20), RSI(14), MACD(12,26,9), Bollinger Band width, plus raw OHLCV
+- Targets:
+  - y_dir (classification): 1 if Close_{t+1} > Close_t, else 0
+  - y_next_close (regression): Close_{t+1}
+
 
 2. **Models**
    - Logistic Regression (classification)  
