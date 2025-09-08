@@ -8,8 +8,11 @@ I evaluate both classification (up vs. down) and regression (next-day price).
 - Regression: Ridge Regression (predict next-day close)
 
 ## How to Run
-```bash
+```
 pip install -r requirements.txt
+# (optional, if running locally in Jupyter)
+pip install -r requirements-dev.txt
+
 jupyter notebook ML_stock_market_predictions.ipynb
 ```
 Inside the notebook you can change:
